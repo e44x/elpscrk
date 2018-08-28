@@ -1,7 +1,6 @@
 
 # -*- coding: utf-8 -*-
 
-import socket
 import sys
 import argparse
 import time
