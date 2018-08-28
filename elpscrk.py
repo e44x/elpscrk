@@ -28,7 +28,7 @@ def ftp(wordlist, user, alvo):
         try:
             c = ftplib.FTP(alvo)
             c.login(user, senha)
-            print('Passord:', senha)
+            print('Password:', senha)
             break
         except ftplib.error_perm:
             print('Password: {}Incorret\n'.format(senha))
