@@ -12,7 +12,6 @@ parser.add_argument("-ip",action="store",required=False,help="IP of target",dest
 parser.add_argument("-usr",action="store",required=False,help="User of FTP",dest="USR")
 parser.add_argument("-psw",action="store",required=False,help="Your wordlist",dest="PSW")
 arguments = parser.parse_args()
-start = time.time()
 arq = open(arguments.PSW, 'rb')
 codetext = arq.readlines()
 size = len(codetext)
@@ -37,6 +36,4 @@ def ftp(wordlist, user, alvo):
 
 
 
-end = time.time()
-var = start - end
 ftp(arguments.PSW,arguments.USR,arguments.IP)
